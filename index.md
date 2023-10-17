@@ -130,9 +130,14 @@ BGM대신 숲의 벌레소리나 새소리, 바람소리를 차용계획.
 
 # [게임 오브젝트 분해]
 
-|연번|오브젝트 이름|오브젝트 이미지|
-|:----:|:----:|:----:|
-|1|축구장|<img src="./img/축구장.png" width="500">|
-|2|골대|<img src="./img/골대.png" width="500">|
-|3|홍길동선수|<img src="./img/홍길동선수.png" height="300">|
-|4|골킵|<img src="./img/골킵.png" height="300">|
+|연번|종류|한글 오브젝트|영어오브젝트|사용처|사진|
+|:----:|:----:|:----:|:----:|:----:|:----:|
+|1|플레이어|플레이어|Player|공용|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/77a7a55c-3a57-4131-897b-02143783ecd5)|
+|2|플레이어|플레이어|Player|공용|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/45efc2da-035f-4620-bcce-b624bef8f405)|
+|3|플레이어|플레이어|Player|공용||
+|4|플레이어|플레이어|Player|공용||
+|5|플레이어|플레이어|Player|공용||
+|6|플레이어|플레이어|Player|공용||
+|7|플레이어|플레이어|Player|공용||
+|8|플레이어|플레이어|Player|공용||
+|9|플레이어|플레이어|Player|공용||
