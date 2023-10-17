@@ -128,16 +128,182 @@ BGM대신 숲의 벌레소리나 새소리, 바람소리를 차용계획.
 
 <br> <br>
 
-# [게임 오브젝트 분해]
+# [게임 시스템 디자인]
+## 1. 게임 오브젝트 분해
 
 |연번|종류|한글 오브젝트|영어오브젝트|사용처|사진|
 |:----:|:----:|:----:|:----:|:----:|:----:|
 |1|플레이어|플레이어|Player|공용|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/77a7a55c-3a57-4131-897b-02143783ecd5)|
-|2|플레이어|플레이어|Player|공용|<img src='/img/test.md/aaa.jpg'>|
-|3|플레이어|플레이어|Player|공용||
-|4|플레이어|플레이어|Player|공용||
-|5|플레이어|플레이어|Player|공용||
-|6|플레이어|플레이어|Player|공용||
-|7|플레이어|플레이어|Player|공용||
-|8|플레이어|플레이어|Player|공용||
-|9|플레이어|플레이어|Player|공용||
+|2|적|들개|dogs|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/987e7682-3e7f-484f-ac71-044c64328fdf)|
+|3|적|스캐빈저|HUMANscab|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/7532410b-4a78-4bbf-a7cc-ef08fdad3710)|
+|4|적|곰|bear|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/7f1d202d-54eb-40d3-b845-9fe2ae77e972)|
+|5|보스|정예투척병|bomber|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/f2259957-7546-4e52-a8b9-f0447181945b)|
+|6|보스|정예전투병|gunman|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/1a485641-86de-4f89-ad53-7942f379f2ce)|
+|7|상점|상점주인|salesman|베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/a7760760-322b-4b74-b765-d25a72f26191)|
+|8|상점|숙소|tent|베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/feba3940-1b7c-4bd6-8d68-2d8d33363850)|
+|9|상점|보관함|i_box|베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/f64e6db3-bffb-49fd-ad99-f17003c53e02)|
+|10|아이템|압박붕대|bandage|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/1c045c1e-2d08-4cd3-a77d-8a56bdbc457e)|
+|11|아이템|통조림|c_food|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/517c1b32-d51c-4718-aded-805c72dc7f2c)|
+|12|아이템|수류탄|granade|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/dad690ee-b03a-4243-9815-615a6f58c127)|
+|13|아이템|일반탄 |FMJbullet |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/fc0877af-7375-4616-bbb0-3ffb7c21aa8c)|
+|14|아이템|할로우포인트|HPbullet |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/ce55ac88-fbc8-4faf-99e5-5c0a3ecd5a8a)|
+|15|아이템|벅샷|buckshot|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/824bcd74-82e6-4a8c-a340-b2e3faeac5f2)|
+|16|아이템|야생고기|Meat |베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/155e7ce6-f399-4e31-81b8-4bbb3a9406a4)|
+|17|아이템|재화|coin |베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/aae237dd-9a90-49e1-bd1c-d314a94a0035)|
+|18|무기|권총|pistol|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/b6c8e220-7920-4d5c-9e48-b8140961de3f)|
+|19|무기|엽총|rifle|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/e94fac93-5aa8-4909-a041-ed440abb6e41)|
+|20|무기|산탄총|shotgun|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/c329333c-8b5e-44ea-b074-8a16e16a73b9)|
+|21|무기|자동소총|AR |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/8639f476-31cb-4ebb-b59c-4d8af8840183)|
+|22|UI|체력|HP|공용|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/3bfd4fd7-8d0a-4ba0-a64c-978cef4a625c)|
+|23|UI|조준점|crosshair |공용|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/b9978a30-3a50-46c8-ab23-2a445eeaf137)|
+|24|UI|지도 |PaperMap |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/87be9b73-dc7d-4e3d-93e9-a97fc8175dd3)|
+|25|UI|탈출지점|exitPoint |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/c4ec7320-df33-4951-b700-e8030b7f4a1c)|
+|26|UI|수류탄|isGranade |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/e12d8da5-6a70-4162-a79c-57fd11081822)|
+|27|UI|잔탄|isBullet |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/2f16f819-618b-4c5c-995a-cdb2a10a8df7)|
+|28|UI|자본|isCoin|베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/4c64f3fa-834a-448a-9df3-28776bdb9572)|
+|29|UI|무게표시|weight |공용|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/c3a540df-e214-42e4-8fad-e580cdb4b163)|
+|30|오브젝트|드럼통|GasCan|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/34cfdb7e-b528-46d0-8b71-b52b172176fa)|
+|31|오브젝트|아이템생성상자|box |필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/457948f2-c768-4bbe-8644-74a38626c858)|
+|32|오브젝트|현상수배|Wanted_D|베이스캠프|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/d57a7509-6309-46bf-a638-639ba667e10c)|
+|33|오브젝트|탄환|bulletOut|필드맵|![image](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/d04c0002-2c02-4550-be91-c5754e1d7c83)|
+
+<br> <br>
+## 2. 파라미터(속성) 뽑아 보기
+<br>
+
+### 1) 오브젝트 이름 : Player
+
+|속성|영문명칭|설명|비고|
+|:----:|:----:|:----:|:----:|
+|체력|hp|플레이어의 체력 수. 토큰형식이므로 100%방식이 아님.||
+|이동속도|speed|플레이어의 이동속도.||
+|무게|weight|플레이어가 가지고 갈 수 있는 아이템의 무게 총합.||
+|수류탄갯수|granadeCount|플레이어가 가지고 있는 수류탄 수.||
+|잔탄|bulletCount|플레이어가 가진 총안에 장전되있는 탄약 수.||
+|소진|isAmmo|플레이어의 탄창이 비었는지 확인용 속성||
+|무리소환|reinforce|랜덤한 확률로 총을 발사할 때 보스가 아닌 몬스터를 생성할 확률||
+<br>
+
+### 2) 오브젝트 이름 : HUMANscab, dogs, bear, bomber, gunman
+
+|속성|영문명칭|설명|비고|
+|:----:|:----:|:----:|:----:|
+|체력|animalHP,scabHP,bossHP|적들의 체력. 적들은 체력바로 표기.||
+|이동속도|animalSpeed,scabSpeed|적들의 이동속도.||
+|데미지|animalDmg,scabDmg,bossDmg|적들의 데미지||
+|아이템|Rand_Item|아이템 랜덤 소지||
+|잔탄|bulletCount|플레이어가 가진 총안에 장전되있는 탄약 수.||
+|감지범위|bustedPoint|적들의 감지범위||
+|무리 만들기|swarm|보스가 아닌 같은 종류의 몬스터 랜덤한 숫자로 다중생성||
+
+<br> <br>
+## 3. 행동 뽑아 보기
+<br>
+
+### 1. 오브젝트 이름 : bomber, gunman
+|행동|영문명칭|설명|
+|:----:|:----:|:----:|
+|정지|IDLES|멈춤. 최초 스폰시 상태|
+|식별|isBusted|플레이어 감지 시스템.|
+|움직임|randMoving|랜덤 움직임.|
+|공격1,2,3|attack1,attack2,attack3|공격패턴|
+|사망|isDead|체력이 0이 되었을 때.|
+
+<br>
+
+### 2. 오브젝트 이름 : Player
+|행동|영문명칭|설명|
+|:----:|:----:|:----:|
+|움직임|moving_walk|어떤 방향이든 누르면 움직임|
+|달리기|running|shift를 누름으로써 움직임 가속|
+|사격|Gunfire|마우스 왼쪽버튼으로 사격|
+|수류탄 던지기|GranadeOut|오브젝트 수류탄을 G키로 전방으로 던짐|
+|인벤토리 열기/닫기|ShowInv/UnshowInv|E키로 인벤토리 열기/닫기|
+|상호작용|getItem|체력이 0 이하가 된 적과 가까이 있을 때 f키로 아이템창 열기/닫기|
+|사망|youDie|체력이 0이 될 때 캐릭터 삭제|
+|정지|IdleP|정지 상태.|
+|재장전|reload|R을 눌렀을 때, 잔탄UI 숫자 감소, 탄창UI숫자 증가 |
+
+<br>
+
+### 3. 오브젝트 이름 : HUMANscab, dogs, bear
+|행동|영문명칭|설명|
+|:----:|:----:|:----:|
+|정지|IDLES|멈춤. 최초 스폰시 상태|
+|식별|isBusted|플레이어 감지 시스템.|
+|랜덤움직임|randMoving|랜덤 움직임.|
+|고정움직임|MovingAtk,scabMoving|플레이어 방향으로 움직임, 스캐빈저는 플레이어와 일정한 거리를 유지하며 움직임|
+|공격|sAttack|스캐빈저의 총 발사|
+|사망|isDead|체력이 0이 되었을 때.|
+
+<br> <br>
+## 4. 상태 뽑아 보기
+<br>
+
+### 1. 오브젝트 이름 : Player
+|현상태|전이상태|전이조건|
+|:----:|:----:|:----:|
+|정지|움직임|wasd로 움직임.|
+|움직임|정지|아무 키도 누르지 않음, 정지|
+|움직임|달리기|shift키를 누르는 동안 가속|
+|달리기|움직임|shift키를 떼면 가속 중지|
+|정지|마우스 클릭|왼쪽 마우스로 탄 발사|
+|움직임|마우스 클릭|이동 중 왼쪽 마우스로 탄 발사|
+|마우스 클릭|정지|마우스 클릭 중지시, 사격 중지|
+|마우스 클릭|움직임|이동중 마우스 클릭 중지시, 사격 중지|
+|정지|수류탄|g키로 수류탄 발사 준비|
+|움직임|수류탄|g키로 수류탄 발사 준비|
+|수류탄|움직임|수류탄 준비 중, 이동|
+|수류탄|마우스 클릭|왼쪽 마우스로 수류탄 발사|
+|수류탄|수류탄|g키로 수류탄 발사 준비 종료|
+|정지|인벤토리 열기|e키로 인벤토리 열기|
+|인벤토리 열기|인벤토리 열기|e키로 인벤토리 닫기|
+|정지|상호작용|f키로 적과 나의 인벤토리 열기|
+|상호작용|상호작용|인벤토리 열기 중, f키로 인벤토리 닫기|
+|정지|재장전|r키로 현 탄창 숫자 최대치로 충전|
+|움직임|재장전|움직이는 중 r키로 현 탄창 숫자 최대치로 충전|
+|사망|사망|체력 토큰이 1보다 없을 경우, 베이스캠프 아이템 저장, 현 플레이어 데이터 삭제, 베이스캠프에서 캐릭터 신규 생성.|
+
+<br>
+
+### 2. 오브젝트 이름 : HUMANscab, bear, dogs
+|현상태|전이상태|전이조건|
+|:----:|:----:|:----:|
+|정지|정지|이동 없음|
+|정지|랜덤움직임|모든 몹 고정 이동속도로 랜덤 움직임|
+|랜덤 움직임|정지|랜덤움직임 종료, 1초 뒤 윗 상태 재돌입|
+|정지 |식별|플레이어가 보이지 않는 식별 구역에 들어올 시. |
+|랜덤 움직임|식별|움직이는 도중 플레이어가 보이지 않는 식별구역에 들어올 시|
+|식별|고정움직임|플레이어 추적, 몬스터가 곰이나 개일 경우, 플레이어와 닿을때까지 추적.|
+|고정움직임|랜덤 움직임|플레이어와 충돌했을 경우, 랜덤한 방향으로 움직여 거리를 벌림.|
+|고정움직임|공격|몬스터가 스캐빈저 일 때, 거리를 유지하며 총알 발사.|
+|사망|사망|몬스터 체력바의 숫자가 1보다 작은 경우, 사망 애니메이션 재생 후, 사망 스프라이트로 전환.|
+
+<br>
+
+### 3. 오브젝트 이름 : bomber, gunman
+|현상태|전이상태|전이조건|
+|:----:|:----:|:----:|
+|정지|정지|이동 없음|
+|정지 |식별|플레이어가 보이지 않는 식별 구역에 들어올 시. |
+|식별|움직임|전투상태 돌입, 적의 체력바 UI 켬, 랜덤하게 움직임.|
+|움직임|공격|플레이어와 충돌했을 경우, 랜덤한 방향으로 움직여 거리를 벌림.|
+|고정움직임|공격|몬스터가 스캐빈저 일 때, 거리를 유지하며 총알 발사.|
+|사망|사망|몬스터 체력바의 숫자가 1보다 작은 경우, 사망 애니메이션 재생 후, 사망 스프라이트로 전환.|
+
+<br> <br>
+## 5. 플레이어 캐릭터 속성(파라미터)
+<br>
+
+|속성|영문명칭|설명|비고|
+|:----:|:----:|:----:|:----:|
+|AR상태|ARMan|전투소총을 든 상태. 인벤토리에 일반탄이 있어야 사격가능.|마우스를 누르고 있으면 누른만큼 총알이 발사된다.|
+|저격상태|RifleMan|소총을 든 상태. 인벤토리에 일반탄이 있어야 사격가능.|한발 한발이 강하다.|
+|샷건상태|ShotGunMan|산탄총을 든 상태. 인벤토리에 샷건탄이 있어야 사격가능.|사격시, 탄이 부채꼴로 3개 생성된다.|
+|권총상태|PistolMan|권총을 든 상태. 인벤토리에 할로우포인트가 있어야 사격가능.|이동속도가 가장 빠르다.|
+|인벤토리에서 각 총기에 해당하는 총기를 장착하면 폼이 바뀐다.
+각 탄의 데미지는 1이고, 보스가 아닌 적의 체력은 10이다.
+소총은 데미지가 5다.
+AR상태가 아니라면 모든 총기는 마우스를 누른 순간 한 개의 잔탄을 소비하며, 자신 앞에 총알을 생성한다.
+권총상태는 기본 이동속도가 +5.0f 증가한다.
+모든 총알의 속도는 20.0f이고, 저격상태는 40.0f의 속도다.|
