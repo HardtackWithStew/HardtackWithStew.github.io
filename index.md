@@ -397,3 +397,24 @@ BGM대신 숲의 벌레소리나 새소리, 바람소리를 차용계획.
 
 <br>
 
+### 시간별 흐름도 flowchart
+
+![게임플로우차트](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/a3d93a52-3e3d-427b-a854-33035f109562)
+
+
+### 키보드 이벤트에 대한 흐름도
+
+![키입력](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/fcbde3ae-32ac-45a3-97d6-1142a759b83b)
+
+### 용어정리
+
+![용어정리](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/fefe80ad-2905-45ab-9f63-6a629b481391)  
+
+## 9. 스토리보드
+
+|항목|설명|사진|
+|:----:|:----:|:----:|
+|필드맵1|공격이 가능한 필드맵에선 크로스헤어를 따라다니는 손전등 빛밖에 보이지 않는다. 랜덤한 맵에 플레이어가 스폰되며, 총이 없다면 랜덤하게 인벤토리에 넣어준다.|![20231026_182829](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/24de806c-fdc6-4d16-8488-29d1df5bfc44)|
+|필드맵2|적을 사격하여 제압할 수 있다. 그러나 확률적으로 총을 발사하면 적을 소환하는 기능도 있다.|![20231026_183120](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/728cd4a2-ec19-4c45-8461-f2d9059e1351)|
+|필드맵3|왼쪽 상단의 ui의 게이지가 다 달게 되면 맵의 랜덤한 위치에 탈출구가 생성이 되며, "탈출 가능"이라는 텍스트가 올라온다.|![20231026_183257](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/2b26a35e-6d6b-4118-9572-2f62e29f13a2)|
+|필드맵4|탈출구는 손전등 광원을 제외하고 빛을 냄으로 쉽게 찾아볼 수 있다.|![20231026_183611](https://github.com/HardtackWithStew/HardtackWithStew.github.io/assets/128970120/c57026bc-3a71-4c72-95de-fe3c2278b035)|
